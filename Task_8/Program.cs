@@ -4,9 +4,9 @@
 8 -> 2, 4, 6, 8*/
 Console.Write("Insert N: ");
 int N=Convert.ToInt32(Console.ReadLine());
-int index =1;
+int index =2;
 while (index<=N)
 {
     if (index%2==0) Console.Write (index+" ");
-    index ++;
+    index +=2;
 }
