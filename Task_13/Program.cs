@@ -19,11 +19,18 @@ string Check (string N)                                         // Процед�
     try{                                
         Convert.ToInt32(N);                                     //Блок проверки ввода строки а не числа
     }
-    catch 
+    catch (FormatException)
     {
         Console.Write ("You String is not a number, try again: ");
         N=Console.ReadLine();
         goto m1;
+    }
+    catch (OverflowException)                                   //Блок проверки переполнения типа int при конвертировании строки
+    
+    {
+      Console.Write ("You number, try again (number must be between -2 147 483 648 and 2 147 483 647): ");  
+      N=Console.ReadLine();
+      goto m1;
     }
     
     return N;
