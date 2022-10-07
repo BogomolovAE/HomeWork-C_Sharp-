@@ -7,11 +7,17 @@
 32679 -> 6 */
 Console.Write("Input number: ");
 string N=Console.ReadLine();
-string Check (string N)                                                         // Процедура проверки значений введенной строки
+string Check (string N)                                         // Процедура проверки значений введенной строки
 {
     m1:
+    while (N=="")
+    {
+        Console.Write("Your String is empty, try again: ");     // Проверка ввода пустой строки
+        N=Console.ReadLine();
+    }
+  
     try{                                
-        Convert.ToInt32(N);                                                      //Блок проверки ввода числа а не строки
+        Convert.ToInt32(N);                                     //Блок проверки ввода строки а не числа
     }
     catch 
     {
@@ -19,9 +25,10 @@ string Check (string N)                                                         
         N=Console.ReadLine();
         goto m1;
     }
-    N=Convert.ToString(Math.Abs(Convert.ToInt32(N)));                           //Убираем нули и минусы вначале числа
+    
     return N;
 }
-N=Check(N);
+N=Convert.ToString(Math.Abs(Convert.ToInt32(Check(N))));        //Убираем нули и минусы вначале числа, запускаем процедуру проверки
 if (N.Length<3) Console.Write("There is no third digit in your number");
 else Console.WriteLine ("The third digit of number N is: "+N[2]);
+                       

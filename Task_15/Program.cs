@@ -6,11 +6,18 @@
 
 Console.Write("Input number of week day (1..7): ");
 string N=Console.ReadLine();
-string Check (string N) // Процедура проверки значений введенной строки
+
+string Check (string N)                                         // Процедура проверки значений введенной строки
 {
     m1:
+    while (N=="")
+    {
+        Console.Write("Your String is empty, try again: ");     // Проверка ввода пустой строки
+        N=Console.ReadLine();
+    }
+  
     try{                                
-        Convert.ToInt32(N);                 //Блок проверки ввода числа а не строки
+        Convert.ToInt32(N);                                     //Блок проверки ввода строки а не числа
     }
     catch 
     {
@@ -20,7 +27,7 @@ string Check (string N) // Процедура проверки значений 
     }
     return N;
 }
-
+N=Check(N);
 while (Convert.ToInt32(N)<1||Convert.ToInt32(N)>7)
 {
     Console.Write("There is no such day in week, try again (number must be between 1 and 7): ");
