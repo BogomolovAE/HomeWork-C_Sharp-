@@ -3,7 +3,7 @@ int [] number = new int [digits];
 for (int i=0; i<=number.Length-1;i++) number[i]=new Random().Next(0,10);
  */
 int [] firstArray= {4,3,4,6,5};
-int [] secondArray= {3};
+int [] secondArray= {3,5};
 
 for (int i=0; i<firstArray.Length;i++) Console.Write($" {firstArray[i]} ");
 Console.WriteLine();
@@ -21,8 +21,9 @@ NumbersMult(firstArray, secondArray);
     {
         for (int array1Index=array1.Length-1;array1Index>=0;array1Index--) //Цикл перебора массива, содержащего цифры первого числа
         {
+           matrixForCount[lines,array2.Length+2+array1Index-lines-1]=(matrixForCount[lines,array2.Length+2+array1Index-lines]+array1[array1Index]*array2[array2Index])/10; //получение десятичного остатка текущего разряда и перенос его в единицы следующего разряда
             matrixForCount[lines,array2.Length+2+array1Index-lines]=(matrixForCount[lines,array2.Length+2+array1Index-lines]+array1[array1Index]*array2[array2Index])%10; //запись единиц текущего разряда для array1
-            matrixForCount[lines,array2.Length+2+array1Index-lines-1]=(array1[array1Index]*array2[array2Index])/10; //получение десятичного остатка текущего разряда и перенос его в единицы следующего разряда
+            
          }
         lines++;
     
