@@ -5,11 +5,9 @@
 
 Console.Write("Input first number: ");
 number firstNumber=new number (Console.ReadLine()); 
-
 bool checkPassed=false;
 int secondNumber;
 string secondNumberinString="";
-
 while (!checkPassed)
 {
     Console.Write("Input second number: ");
