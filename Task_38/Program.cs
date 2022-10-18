@@ -12,7 +12,7 @@ double [] RandomArray(int numberOfElements,int min, int max)
     
     for (int i=0;i<arrayInDbl.Length;i++)
     {
-        arrayInDbl[i]=new Random().Next(min,max);
+        arrayInDbl[i]=Convert.ToDouble((new Random().Next(min*100,max*100)))/1000;
         if (newMax) 
         {
             maxVal=arrayInDbl[i];
@@ -31,4 +31,4 @@ double [] RandomArray(int numberOfElements,int min, int max)
 }
 RandomArray(20,-100, 100);
 Console.WriteLine();
-Console.WriteLine($"min={minVal}    max={maxVal}    max-min={maxVal-minVal}");
+Console.WriteLine($"min={minVal}    max={maxVal}    max-min={maxVal-minVal:f4}");
