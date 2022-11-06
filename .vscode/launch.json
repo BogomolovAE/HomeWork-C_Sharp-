@@ -15,9 +15,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Task_62/bin/Debug/net6.0/Task_62.dll",
+            "program": "${workspaceFolder}/Task_57/bin/Debug/net6.0/Task_57.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Task_62",
+            "cwd": "${workspaceFolder}/Task_57",
             "console": "integratedTerminal",
             "stopAtEntry": false,
             "requireExactSource": false
