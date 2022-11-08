@@ -44,7 +44,7 @@ void PrintArray (int[,] array, int emptysymbols)                 //метод в
     {
         for (int j=0; j<array.GetLength(1);j++)
         {
-            if (array[i,j]==0)//j>0&&array[i,j]==0&&array[i,j-1]>0)
+            if (array[i,j]==0)
             {
                 Console.Write($"{new string(' ',(maxSymbolElement-NumberLength(array[i,j]))/2)}{" "}{new string(' ',maxSymbolElement-(maxSymbolElement-NumberLength(array[i,j]))/2-NumberLength(array[i,j]))}");
                     
