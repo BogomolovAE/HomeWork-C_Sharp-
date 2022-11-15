@@ -84,3 +84,4 @@ int CorrectNaturalNumber()                                       //метод п
     }
 } 
 
+
